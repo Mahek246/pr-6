@@ -1,0 +1,53 @@
+<table border="5">
+    <tr>
+        <td>no</td>
+        <td>name</td>
+        <td>surname</td>
+        <td>phoneno</td>
+        <td>bod</td>
+    </tr>
+    <tbody id="frendes">
+    </tbody>
+</table>
+
+<script type="text/javascript">
+
+    let tbl = "";
+
+    class Emp{
+        constructor(no,name,surname,phoneno,bod){
+            this.no = no;
+            this.name = name;
+            this.surname = surname;
+            this.phoneno = phoneno;
+            this.bod = bod ;
+        }
+        getfrendes(){
+
+            tbl += `
+                        <tr>
+                            <td>${this.no}</td>
+                            <td>${this.name}</td>
+                            <td>${this.surname}</td>
+                            <td>${this.phoneno}</td>
+                            <td>${this.bod}</td>
+                        </tr>
+                    `
+
+            document.getElementById('frendes').innerHTML = tbl;
+        }
+    }
+
+    let ans = new Emp(1,"Hinal","Sabhaya",1234567890,"00-00-0000");
+    let ans1 = new Emp(2,"Mahek","Patoliya",1234567890,"00-00-0000");
+    let ans2 = new Emp(3,"Nensi","kakadiya",1234567890,"00-00-0000");
+    let ans3 = new Emp(4,"Krina","pathak",1234567890,"00-00-0000");
+    let ans4 = new Emp(5,"Bhargvi","patel",1234567890,"00-00-0000");
+   
+    ans.getfrendes();
+    ans1.getfrendes();
+    ans2.getfrendes();
+    ans3.getfrendes();
+    ans4.getfrendes();
+    
+</script>
